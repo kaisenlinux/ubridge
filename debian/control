@@ -1,0 +1,15 @@
+Source: ubridge
+Section: net
+Priority: optional
+Maintainer: Kevin Chevreuil - Kaisen <kaisen@kaisen-linux.org>
+Build-Depends: debhelper, libpcap-dev
+Standards-Version: 4.5.0
+Homepage: https://gns3.com
+Vcs-Git: https://gitlab.com/kaisenlinux/packages/ubridge.git
+Vcs-Browser: https://gitlab.com/kaisenlinux/packages/ubridge
+
+Package: ubridge
+Architecture: all
+Depends: ${shlibs:Depends},
+	 ${misc:Depends},
+Description: Bridge for UDP tunnels, Ethernet, TAP and VMnet interfaces

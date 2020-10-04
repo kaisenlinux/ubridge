@@ -1,0 +1,5 @@
+ubridge (0.9.18-1kaisen1) kaisen-packages; urgency=medium
+
+  * First packaging for Kaisen Linux
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisen-linux.org>  Sun, 04 Oct 2020 05:55:10 +0200
