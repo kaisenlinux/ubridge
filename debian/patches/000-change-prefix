@@ -1,0 +1,13 @@
+Author: Kevin Chevreuil - Kaisen <kaisen@kaisen-linux.org>
+
+--- ubridge-0.9.18.orig/Makefile
++++ ubridge-0.9.18/Makefile
+@@ -42,7 +42,7 @@ CC      ?=   gcc
+ 
+ CFLAGS  +=   -Wall
+ 
+-BINDIR  =   /usr/local/bin
++BINDIR  =   /usr/bin
+ 
+ ifeq ($(shell uname), Darwin)
+    LIBS =   -lpthread -lpcap

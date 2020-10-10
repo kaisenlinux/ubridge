@@ -1,3 +1,11 @@
+ubridge (0.9.18-1kaisen2) kaisen-packages; urgency=medium
+
+  * Add override_dh_auto_install
+  * Modify Makefile patch
+  * Remove shlibs depends
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisen-linux.org>  Sat, 10 Oct 2020 21:45:46 +0200
+
 ubridge (0.9.18-1kaisen1) kaisen-packages; urgency=medium
 
   * First packaging for Kaisen Linux

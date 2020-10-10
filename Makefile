@@ -102,6 +102,3 @@ install : $(NAME)
 	cp -p $(NAME) $(BINDIR)
 	setcap cap_net_admin,cap_net_raw=ep $(BINDIR)/$(NAME)
 endif
-
-install: ubridge
-	install -Dm755 ubridge $(DESTDIR)$(BINDIR)/ubridge
