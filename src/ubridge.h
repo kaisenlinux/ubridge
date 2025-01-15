@@ -36,7 +36,7 @@
 #include "packet_filter.h"
 
 #define NAME          "ubridge"
-#define VERSION       "0.9.18"
+#define VERSION       "0.9.19"
 #define CONFIG_FILE   "ubridge.ini"
 
 #ifndef FALSE
@@ -49,6 +49,9 @@
 
 #define handle_error_en(en, msg) \
         do { errno = en; perror(msg); exit(EXIT_FAILURE); } while (0)
+
+#define perror(msg) \
+        do { int en = errno; perror(msg); errno = en; } while (0)
 
 typedef struct {
     pcap_t *fd;

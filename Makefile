@@ -42,7 +42,7 @@ CC      ?=   gcc
 
 CFLAGS  +=   -Wall
 
-BINDIR  =   /usr/bin
+BINDIR  =   /usr/local/bin
 
 ifeq ($(shell uname), Darwin)
    LIBS =   -lpthread -lpcap

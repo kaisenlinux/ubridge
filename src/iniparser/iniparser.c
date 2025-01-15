@@ -456,7 +456,7 @@ long int iniparser_getlongint(const dictionary * d, const char * key, long int n
     const char * str ;
 
     str = iniparser_getstring(d, key, INI_INVALID_KEY);
-    if (str==INI_INVALID_KEY) return notfound ;
+    if (str==NULL || str==INI_INVALID_KEY) return notfound ;
     return strtol(str, NULL, 0);
 }
 
@@ -511,7 +511,7 @@ double iniparser_getdouble(const dictionary * d, const char * key, double notfou
     const char * str ;
 
     str = iniparser_getstring(d, key, INI_INVALID_KEY);
-    if (str==INI_INVALID_KEY) return notfound ;
+    if (str==NULL || str==INI_INVALID_KEY) return notfound ;
     return atof(str);
 }
 
@@ -553,7 +553,7 @@ int iniparser_getboolean(const dictionary * d, const char * key, int notfound)
     const char * c ;
 
     c = iniparser_getstring(d, key, INI_INVALID_KEY);
-    if (c==INI_INVALID_KEY) return notfound ;
+    if (c==NULL || c==INI_INVALID_KEY) return notfound ;
     if (c[0]=='y' || c[0]=='Y' || c[0]=='1' || c[0]=='t' || c[0]=='T') {
         ret = 1 ;
     } else if (c[0]=='n' || c[0]=='N' || c[0]=='0' || c[0]=='f' || c[0]=='F') {
@@ -718,7 +718,7 @@ dictionary * iniparser_load(const char * ininame)
     char line    [ASCIILINESZ+1] ;
     char section [ASCIILINESZ+1] ;
     char key     [ASCIILINESZ+1] ;
-    char tmp     [(ASCIILINESZ * 2) + 1] ;
+    char tmp     [(ASCIILINESZ * 2) + 2] ;
     char val     [ASCIILINESZ+1] ;
 
     int  last=0 ;
